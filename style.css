@@ -1,0 +1,283 @@
+/*
+ Theme Name:   Gabe's Twentyseventeen
+ Description:  A custom version of Twentyseventeen.
+ Template:     twentyseventeen
+ Author:       The Wordpress Team, Gabriel Lundmark
+*/
+
+/* Custom fonts */
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Palanquin|Palanquin+Dark:700");
+
+/* Animate.css library. For later use! Maybe! */
+/* @import url("https://cdnjs.com/libraries/animate.css"); */
+
+/* Variables */
+:root {
+  /* Variables */
+  --main-font: "Palanquin", sans-serif;
+  --secondary-font: "Palanquin Dark", sans-serif;
+  --site-description-font: "Pacifico", cursive;
+  --highlight-color: hsl(191, 50%, 46%);
+  --menu-highlight-color: hsl(34, 94%, 49%);
+  min-width: 320px;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/* Layout */
+.wrap {
+  max-width: 1200px;
+}
+
+/* Site identity */
+.site-title,
+.site-title a {
+  font-size: 2.5rem;
+  font-family: var(--secondary-font);
+  /* text-transform: initial; */
+}
+
+.site-description {
+  text-shadow: 2px 2px 0 var(--highlight-color);
+  font-family: var(--site-description-font);
+  font-size: 1.2rem;
+}
+
+.wp-custom-header * {
+  /* Fulhack to fix that ugly white line */
+  background-color: black;
+}
+
+/* Navigation */
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+  font-family: var(--secondary-font);
+  color: black;
+}
+
+button.menu-toggle {
+  color: white;
+}
+
+.main-navigation.toggled-on,
+.main-navigation ul {
+  background-color: black;
+}
+
+.navigation-top {
+  border: 0;
+  margin: 0;
+  background-color: black;
+}
+
+.main-navigation a,
+.site-header .navigation-top .menu-scroll-down {
+  /* Top menu items and scroll-down arrow */
+  color: white;
+  transition: transform 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+  font-family: var(--secondary-font);
+  color: white;
+}
+
+/* Desktop speficic styling */
+@media screen and (min-width: 800px) {
+  /* Frontpage custom navbar */
+  .main-navigation ul {
+    background-color: initial;
+  }
+  body.home .navigation-top {
+    /* Transparent menu on homepage. I should probably make changes to the header files instead, but this works. */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Blur for Safari users */
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  body.home .navigation-top.site-navigation-fixed {
+    transition: all 1s;
+    background-color: rgba(0, 0, 0, 1);
+    /* Placeholder for code to make fixed navbar tinier */
+  }
+  .has-sidebar:not(.error404) #primary {
+    width: 70%;
+  }
+
+  .has-sidebar #secondary {
+    width: 26%;
+  }
+
+  /* Hover behavior */
+  .site-header .navigation-top .menu-scroll-down:hover {
+    color: var(--menu-highlight-color);
+  }
+
+  .social-navigation a:hover,
+  .social-navigation a:focus {
+    /* Override default behavior to mimic other menus */
+    background-color: var(--menu-highlight-color);
+    transition: background-color 0.2s;
+  }
+
+  .main-navigation a:hover {
+    color: var(--menu-highlight-color);
+    transform: scale(1.1);
+  }
+}
+
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.widget a:focus,
+.widget a:hover,
+.site-footer .widget-area a:focus,
+.site-footer .widget-area a:hover,
+.posts-navigation a:focus,
+.posts-navigation a:hover,
+.comment-metadata a:focus,
+.comment-metadata a:hover,
+.comment-metadata a.comment-edit-link:focus,
+.comment-metadata a.comment-edit-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+.widget_authors a:focus strong,
+.widget_authors a:hover strong,
+.entry-title a:focus,
+.entry-title a:hover,
+.entry-meta a:focus,
+.entry-meta a:hover,
+.page-links a:focus .page-number,
+.page-links a:hover .page-number,
+.entry-footer a:focus,
+.entry-footer a:hover,
+.entry-footer .cat-links a:focus,
+.entry-footer .cat-links a:hover,
+.entry-footer .tags-links a:focus,
+.entry-footer .tags-links a:hover,
+.post-navigation a:focus,
+.post-navigation a:hover,
+.pagination a:not(.prev):not(.next):focus,
+.pagination a:not(.prev):not(.next):hover,
+.comments-pagination a:not(.prev):not(.next):focus,
+.comments-pagination a:not(.prev):not(.next):hover,
+.logged-in-as a:focus,
+.logged-in-as a:hover,
+a:focus .nav-title,
+a:hover .nav-title,
+.edit-link a:focus,
+.edit-link a:hover,
+.site-info a:focus,
+.site-info a:hover,
+.widget .widget-title a:focus,
+.widget .widget-title a:hover,
+.widget ul li a:focus,
+.widget ul li a:hover {
+  color: var(--highlight-color);
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: var(--menu-highlight-color);
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  font-family: var(--main-font);
+}
+
+/* Background color */
+.site-content-contain {
+  /* Maybe for future use. I like the whitespace. */
+}
+
+/* Headlines */
+.entry-date,
+.post-edit-link {
+  font-size: 0.6rem;
+  color: var(--highlight-color);
+}
+
+.entry-title a,
+.entry-content h1,
+h1.entry-title {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+}
+
+h2.page-title {
+  display: none;
+}
+h2.widget-title {
+  font-family: var(--secondary-font);
+  text-transform: initial;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+p,
+li {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+aside p {
+  font-size: 0.8rem;
+}
+
+/*  Image captions */
+.wp-caption-text {
+  color: var(--highlight-color);
+}
+
+/* Code blocks */
+pre {
+  background-color: hsl(191, 50%, 93%);
+}
+
+/* Footer */
+footer .social-navigation,
+footer div.site-info {
+  /* Center social icons and footer text */
+  text-align: center;
+  width: 100%;
+  margin: 0 !important;
+  float: none;
+}
+
+.social-navigation a {
+  margin: 0.5em;
+  color: white;
+  background-color: black;
+}
+
+/* Plugin specifik tweaks */
+#toc_container a:hover {
+  /* Removes Table of Contents plugin styling */
+  text-decoration: none;
+}
