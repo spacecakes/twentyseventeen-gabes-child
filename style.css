@@ -27,8 +27,10 @@ body {
 }
 
 /* Layout */
-.wrap {
-  max-width: 1200px;
+.site-content .wrap,
+.site-content .wrap .content-area.wide {
+  /* Widescreen display template and frontpage max width */
+  max-width: 1200px !important;
 }
 
 /* Site identity */

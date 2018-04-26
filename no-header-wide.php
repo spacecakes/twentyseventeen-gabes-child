@@ -1,17 +1,19 @@
 <?php
 /**
- Template Name: Creations
- */
+* Template name: No header (wide)
+* Hides the header on pages, for a cleaner look, and displays it in widescreen
+*/
 
 get_header(); ?>
 
 <div class="wrap">
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area wide">
 		<main id="main" class="site-main" role="main">
+			<!-- Look, ma'! No header!  -->
 			<?php
             while (have_posts()) : the_post();
 
-                get_template_part('template-parts/page/content', 'page');
+                get_template_part('template-parts/page/content', 'page-no-header');
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if (comments_open() || get_comments_number()) :

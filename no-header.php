@@ -1,6 +1,6 @@
 <?php
 /**
-* Template name: No page header
+* Template name: No header
 * Hides the header on pages, for a cleaner look
 */
 
