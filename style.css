@@ -216,22 +216,33 @@ textarea {
 }
 
 /* Headlines */
-.entry-date,
-.post-edit-link {
-  font-size: 0.6rem;
+.entry-date {
   color: var(--highlight-color);
 }
+.entry-date,
+.entry-meta {
+  font-size: 0.6rem;
+}
 
-.entry-title a,
-.entry-content h1,
-h1.entry-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
   font-family: var(--secondary-font);
-  font-size: 3rem;
 }
 
-h2.page-title {
-  display: none;
+h1 {
+  font-size: 1.5rem;
 }
+
+h2,
+.home.blog .entry-title {
+  font-size: 2rem;
+}
+
 h2.widget-title {
   font-family: var(--secondary-font);
   text-transform: initial;
@@ -239,15 +250,40 @@ h2.widget-title {
   margin-bottom: 1rem;
 }
 
-/* Paragraphs */
-p,
-li {
-  font-size: 1.2em;
-  line-height: 1.6em;
+h3 {
+  font-size: 1.125rem;
+}
+.home.blog h3.entry-title,
+.single-post h1.entry-title {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  color: #767676;
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 0.9375rem;
+  font-weight: 800;
 }
 
 aside p {
   font-size: 0.8rem;
+}
+
+p,
+li,
+.sidebar.inline p {
+  /* Sidebar normally has a smaller font, but renders in normal size when displayed inline */
+  font-size: 1.2em;
+  line-height: 1.6em;
 }
 
 /*  Image captions */
