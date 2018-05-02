@@ -27,10 +27,19 @@ body {
 }
 
 /* Layout */
-.site-content .wrap,
-.site-content .wrap .content-area.wide {
+.site-content .wrap {
   /* Widescreen display template and frontpage max width */
-  max-width: 1200px !important;
+  max-width: 1200px;
+}
+
+.content-area.wide,
+.site-content .wrap.wide {
+  max-width: 1000px !important;
+}
+
+.content-area.ultra-wide,
+.site-content .wrap.utltra-wide {
+  max-width: 1400px !important;
 }
 
 /* Site identity */
@@ -299,7 +308,7 @@ pre {
 }
 
 /* Footer */
-footer .social-navigation,
+.social-navigation,
 footer div.site-info {
   /* Center social icons and footer text */
   text-align: center;

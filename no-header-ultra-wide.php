@@ -1,13 +1,13 @@
 <?php
 /**
-* Template name: No header
-* Hides the header on pages, for a cleaner look
+* Template name: No header (ultra wide)
+* Hides the header on pages, for a cleaner look, and displays it in ultra widescreen
 */
 
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
+<div class="wrap ultra-wide">
+	<div id="primary" class="content-area ultra-wide">
 		<main id="main" class="site-main" role="main">
 			<!-- Look, ma'! No header!  -->
 			<?php
