@@ -1,13 +1,13 @@
 <?php
 /**
-* Template name: No header (wide)
-* Hides the header on pages, for a cleaner look, and displays it in widescreen
+* Template name: Full-width (no header)
+* Hides the header on pages, for a cleaner look, and displays it in ultra widescreen
 */
 
 get_header(); ?>
 
-<div class="wrap wide">
-	<div id="primary" class="content-area wide">
+<div class="wrap ultra-wide">
+	<div id="primary" class="content-area ultra-wide">
 		<main id="main" class="site-main" role="main">
 			<!-- Look, ma'! No header!  -->
 			<?php
@@ -18,8 +18,11 @@ get_header(); ?>
             endwhile; // End of the loop.
             ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+		</main>
+		<!-- #main -->
+	</div>
+	<!-- #primary -->
+</div>
+<!-- .wrap -->
 
 <?php get_footer();

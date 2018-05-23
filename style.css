@@ -1,8 +1,9 @@
 /*
  Theme Name:   Gabe's Twentyseventeen
- Description:  A custom version of Twentyseventeen.
+ Description:  A custom version of Twentyseventeen for use on gabriellundmark.com.
  Template:     twentyseventeen
  Author:       The Wordpress Team, Gabriel Lundmark
+ Version:      1.1
 */
 
 /* Custom fonts */
@@ -294,8 +295,8 @@ p,
 li,
 .sidebar.inline p {
   /* Sidebar normally has a smaller font, but renders in normal size when displayed inline */
-  font-size: 1.2em;
-  line-height: 1.6em;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 /*  Image captions */

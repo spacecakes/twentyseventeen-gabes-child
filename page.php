@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages without comments
+ * The default template for displaying all pages without comments
  */
 
 get_header(); ?>
@@ -17,8 +17,11 @@ get_header(); ?>
             endwhile; // End of the loop.
             ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+		</main>
+		<!-- #main -->
+	</div>
+	<!-- #primary -->
+</div>
+<!-- .wrap -->
 
 <?php get_footer();
