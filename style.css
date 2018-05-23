@@ -28,18 +28,20 @@ body {
 
 /* Layout */
 .site-content .wrap {
-  /* Widescreen display template and frontpage max width */
+  /* Increase front-page width */
   max-width: 1200px;
 }
 
-.content-area.wide,
-.site-content .wrap.wide {
+/* Wide template */
+.wide {
+  /* Believe it or not, using !important is actually the most neat solution here, without using approx. 100 million selectors */
   max-width: 1000px !important;
 }
 
-.content-area.ultra-wide,
-.site-content .wrap.utltra-wide {
-  max-width: 1400px !important;
+/* Full-width template */
+.ultra-wide {
+  max-width: 100% !important;
+  padding: 0;
 }
 
 /* Site identity */
@@ -47,7 +49,6 @@ body {
 .site-title a {
   font-size: 2.5rem;
   font-family: var(--secondary-font);
-  /* text-transform: initial; */
 }
 
 .site-description {
@@ -57,7 +58,7 @@ body {
 }
 
 .wp-custom-header * {
-  /* Fulhack to fix that ugly white line */
+  /* Fulhack to fix that ugly white line below the hero image  */
   background-color: black;
 }
 
